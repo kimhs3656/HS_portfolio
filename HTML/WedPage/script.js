@@ -100,3 +100,35 @@ function moveToSection(index){
         sections[currentSection].scrollIntoView({behavior:'smooth'});
     }
 }
+
+document.querySelectorAll(".card1").forEach(button => {
+    button.addEventListener("click", () => {
+        const box = button.closest(".box");
+        box.classList.toggle("flipped");
+    });
+});
+
+document.querySelectorAll('.box-back').forEach(box => {
+    const images = box.querySelectorAll('.project-image');
+    const prevBtn = box.querySelector('.prev-btn');
+    const nextBtn = box.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function updateImages() {
+        images.forEach((img, index) => {
+            img.style.display = index === currentIndex ? 'block' : 'none';
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        updateImages();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        updateImages();
+    });
+
+    updateImages(); // 초기화
+});
