@@ -101,12 +101,12 @@ function moveToSection(index){
     }
 }
 
-document.querySelectorAll(".card1").forEach(button => {
-    button.addEventListener("click", () => {
-        const box = button.closest(".box");
-        box.classList.toggle("flipped");
-    });
-});
+// document.querySelectorAll(".card1").forEach(button => {
+//     button.addEventListener("click", () => {
+//         const box = button.closest(".box");
+//         box.classList.toggle("flipped");
+//     });
+// });
 
 document.querySelectorAll('.box-back').forEach(box => {
     const images = box.querySelectorAll('.project-image');
@@ -132,3 +132,10 @@ document.querySelectorAll('.box-back').forEach(box => {
 
     updateImages(); // 초기화
 });
+
+function openModal(index) {
+    document.getElementById('projectModal').style.display = 'block';
+}
+function closeModal() {
+    document.getElementById('projectModal').style.display = 'none';
+}

@@ -115,68 +115,33 @@
                     <div class="box-inner">
                         <div class="box-front">
                             <div class="icon">
-                            <i class="fas fa-desktop"></i>
+                                <i class="fas fa-desktop"></i>
                             </div>
                             <div class="topic">Project</div>
-                            <p>전력 요금 및 사용량 조회 </p>
-                            <p>/</p> 
-                            <p>SNS 소셜 로그인</p>
-                            <div class="card1">상세보기</div>
-                        </div>
-                        <div class="box-back">
-                            <div class="slider-container">
-                                <button class="prev-btn">&lt;</button>
-                                <div class="image-wrapper">
-                                    <img src="img/project1_mainpage.PNG" alt="main_page" class="project-image active">
-                                    <img src="img/project1_loginpage.PNG" alt="login_page" class="project-image">
-                                    <img>
-                                </div>
-                                <button class="next-btn">&gt;</button>
-                            </div>
-                            <div class="project-info">
-                            <h3 class="project-title">전력 요금 및 사용량 조회</h3>
-                            <h3 class="project-title">/</h3> 
-                            <h3 class="project-title">SNS 소셜 로그인</h3>
-                            <p class="project-duration">기간: 2024.01.04 - 01.13</p>
-                            <p class="project-description">
-                                사용자의 전력 요금과 사용량을 실시간으로 조회할 수 있도록 개발한 웹 사이트입니다.
-                                SNS 소셜 로그인을 위해 API를 활용하였고, Q&A 게시판도 추가 구현 하였습니다.
-                            </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-out" data-aos-duration="1500">
-                    <div class="box-inner">
-                        <div class="box-front">
-                            <div class="icon">
-                            <i class="fas fa-desktop"></i>
-                            </div>
-                            <div class="topic">Project</div>
-                            <p>전력사용량 예측 대시보드</p>
-                        </div>
-                        <div class="box-back">
-                            <p>test</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box" data-aos="zoom-out" data-aos-duration="1500">
-                    <div class="box-inner">
-                        <div class="box-front">
-                            <div class="icon">
-                            <i class="fas fa-desktop"></i>
-                            </div>
-                            <div class="topic">Project</div>
-                            <p>버스 이용자 수 예측 및 불편사항 접수 시스템</p>
-                        </div>
-                        <div class="box-back">
-                            <p>test</p>
+                            <p>전력 요금 및 사용량 조회</p>
+                            <button class="detail-btn" onclick="openModal(0)">상세보기</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-     </section>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="slider-container">
+                <button class="prev-btn" onclick="changeImage(-1)">&lt;</button>
+                <img id="modalImage" src="project1_mainpage.png" alt="project image">
+                <button class="next-btn" onclick="changeImage(1)">&gt;</button>
+            </div>
+            <div class="modal-description">
+                <h3>전력 요금 및 사용량 조회</h3>
+                <p>사용자의 전력 요금과 사용량을 실시간으로 조회할 수 있는 웹 사이트.</p>
+            </div>
+        </div>
+    </div>
+    
 
      <!-- Contact Me section Start-->
      <section class="contact" id="contact">
