@@ -133,9 +133,18 @@ document.querySelectorAll('.box-back').forEach(box => {
     updateImages(); // 초기화
 });
 
-function openModal(index) {
-    document.getElementById('projectModal').style.display = 'block';
+// 카드 클릭 시 뒤집기 기능
+function flipCard(card) {
+    card.classList.toggle('flipped');
 }
+
+// 모달 열기
+function openModal(event, projectIndex) {
+    event.stopPropagation(); // 부모 요소의 클릭 이벤트가 실행되지 않도록 방지
+    document.getElementById("projectModal").style.display = "block";
+}
+
+// 모달 닫기
 function closeModal() {
-    document.getElementById('projectModal').style.display = 'none';
+    document.getElementById("projectModal").style.display = "none";
 }

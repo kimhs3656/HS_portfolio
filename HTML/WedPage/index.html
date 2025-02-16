@@ -24,7 +24,7 @@
     <!-- Home Section Start-->
     <section class="home" id="home">
         <div class="home-img" data-aos="zoom-out" data-aos-duration="1500">
-            <img src="main.png" alt="">
+            <img src="img/main.png" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Kim</span></h1>
@@ -45,7 +45,7 @@
             <div class="title"><span>About Me</span></div>
             <div class="about-details">
                 <div class="left">
-                    <img src="main.png" alt="">
+                    <img src="img/main.png" alt="">
                 </div>
                 <div class="right">
                     <div class="topic">Designing Is My Passion</div>
@@ -111,32 +111,39 @@
         <div class="content">
             <div class="title"><span>My Project</span></div>
             <div class="boxes">
-                <div class="box" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
                     <div class="box-inner">
+                        <!-- 카드 앞면 -->
                         <div class="box-front">
                             <div class="icon">
                                 <i class="fas fa-desktop"></i>
                             </div>
-                            <div class="topic">Project</div>
-                            <p>전력 요금 및 사용량 조회</p>
-                            <button class="detail-btn" onclick="openModal(0)">상세보기</button>
+                            <div class="topic">전력 사용량 조회</div>
+                        </div>
+                        <!-- 카드 뒷면 -->
+                        <div class="box-back">
+                            <img src="img/project1_mainpage.png" class="thumbnail_img">
+                            <button class="detail-btn" onclick="openModal(event, 0)">
+                                <span class="project_span">상세보기</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- 모달 창 -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <div class="slider-container">
                 <button class="prev-btn" onclick="changeImage(-1)">&lt;</button>
-                <img id="modalImage" src="project1_mainpage.png" alt="project image">
+                <img id="modalImage" src="img/project1_mainpage.png" alt="project image">
                 <button class="next-btn" onclick="changeImage(1)">&gt;</button>
             </div>
             <div class="modal-description">
-                <h3>전력 요금 및 사용량 조회</h3>
+                <h3>주제</h3>
                 <p>사용자의 전력 요금과 사용량을 실시간으로 조회할 수 있는 웹 사이트.</p>
             </div>
         </div>

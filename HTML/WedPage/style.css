@@ -535,7 +535,7 @@ section .button button:hover{
     background-color: #fff;
     color: #b74b4b;
 }
-.box.flipped .box-inner{
+.box:hover .box-inner{
     transform: rotateY(180deg);
 }
 .box-front, .box-back {
@@ -560,10 +560,14 @@ section .button button:hover{
     padding: 20px;
     height: 100%;
 }
-
+.thumbnail_img{
+    width: 200px;
+    height: 200px;
+}
 /* 이미지와 텍스트를 각각 감싸는 컨테이너 */
 .slider-container {
     position: relative;
+    top:30px;
     width: 100%;
     max-height: 435px;
     display: flex;
@@ -606,13 +610,89 @@ section .button button:hover{
     border-radius: 5px;
 }
 
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
+.prev-btn { left: 415px; }
+.next-btn { right: 415px; }
 
 .prev-btn:hover, .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.detail-btn{
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border:2px solid #000;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    position: relative;
+    display: inline-block;
+}
+
+.detail-btn{
+    line-height: 39px;
+    padding: 0;
+}
+.detail-btn:hover{
+    background: transparent;
+    color: #000;
+}
+.detail-btn span{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.detail-btn:before,
+.detail-btn:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #000;
+    transition: all 0.3s ease;
+}
+.detail-btn:before{
+    height: 0%;
+    width: 2px;
+}
+.detail-btn:after{
+    width: 0%;
+    height: 2px;
+}
+.detail-btn:hover:before {
+    height: 100%;
+  }
+.detail-btn:hover:after {
+    width: 100%;
+  }
+.detail-btn .project_span:before,
+.detail-btn .project_span:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #000;
+    transition: all 0.3s ease;
+  }
+.detail-btn .project_span:before {
+    width: 2px;
+    height: 0%;
+  }
+.detail-btn .project_span:after {
+    width: 0%;
+    height: 2px;
+  }
+.detail-btn .project_span:hover:before {
+    height: 100%;
+  }
+.detail-btn .project_span:hover:after {
+    width: 100%;
+  }
+.project_span{
+    color:white;
+}
 /* 텍스트 영역 */
 .project-info {
     flex-grow: 1; /* 이미지 크기에 따라 자동으로 조정되도록 설정 */
@@ -658,17 +738,52 @@ section .button button:hover{
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 1000;
+    overflow: hidden; /* 전체 모달 창 크기 유지 */
+    display: flex;
+    flex-direction: column;
 }
+
 .modal-content {
     position: relative;
     text-align: center;
+    flex-grow: 1; /* 내용이 늘어나면 내부에서 스크롤 */
+    overflow-y: auto;
+    max-height: calc(100% - 40px); /* 모달의 높이 제한 */
+    padding: 10px;
 }
+
 .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 24px;
     cursor: pointer;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-height: 350px; /* 이미지 높이 조정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+img#modalImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.modal-description {
+    color: black;
+    padding: 10px;
+    text-align: left;
+    max-height: 200px; /* 설명이 너무 길면 스크롤 */
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
 }
 /*---------------------------------------*/
 /* Footer CSS*/
