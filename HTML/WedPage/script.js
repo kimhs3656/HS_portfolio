@@ -55,32 +55,43 @@ window.addEventListener('scroll',()=>{
     })
 });
 
-//스크롤 시 바로 다음 섹션으로 이동
+// 배경 페이지 스크롤 처리 함수 (모달 외부에서만 작동)
 let sections = document.querySelectorAll('section');
 let currentSectionIndex = 0;
 let isScrolling = false;
 
-window.addEventListener('wheel',(event)=>{
-    if(isScrolling) return;
+function handleBackgroundScroll(event) {
+    if (isScrolling) return;
 
-    isScrolling = true;
+    // 배경 페이지의 스크롤만 처리
+    if (event.target === document.body) {
+        isScrolling = true;
 
-    if(event.deltaY > 0){
-        
-        if(currentSectionIndex < sections.length -1){
-            currentSectionIndex++;
+        if (event.deltaY > 0) {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+            }
+        } else {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+            }
         }
-    }else{
 
-        if(currentSectionIndex > 0){
-            currentSectionIndex--;
-        }
+        sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 800);
     }
-    sections[currentSectionIndex].scrollIntoView({behavior:'smooth'});
+}
 
-    setTimeout(()=>{
-        isScrolling = false;
-    }, 800);
+// 초기 상태에서 wheel 이벤트 리스너 추가
+window.addEventListener('wheel', handleBackgroundScroll, { passive: false });
+
+// 모달 내부의 스크롤은 정상적으로 작동하도록 설정
+document.querySelector('.modal').addEventListener('wheel', (event) => {
+    // 모달 내부에서 스크롤이 작동하도록 허용
+    event.stopPropagation();
 });
 
 // 키보드 위아래 움직이면 섹션 하나씩 넘어가기
@@ -138,13 +149,30 @@ function flipCard(card) {
     card.classList.toggle('flipped');
 }
 
-// 모달 열기
+// wheel 이벤트를 비활성화하는 함수
+function disableScroll(event) {
+    event.preventDefault();
+}
+
+// 모달을 열 때 스크롤 잠그기
 function openModal(event, projectIndex) {
     event.stopPropagation(); // 부모 요소의 클릭 이벤트가 실행되지 않도록 방지
     document.getElementById("projectModal").style.display = "block";
+    
+    // 배경 페이지 스크롤 비활성화
+    document.body.style.overflow = "hidden";
+
+    // 페이지의 wheel 이벤트 리스너 비활성화 (모달이 열릴 때)
+    window.addEventListener('wheel', handleBackgroundScroll, { passive: false });
 }
 
-// 모달 닫기
+// 모달을 닫을 때 스크롤 활성화
 function closeModal() {
     document.getElementById("projectModal").style.display = "none";
+    
+    // 배경 페이지 스크롤 활성화
+    document.body.style.overflow = "auto";
+
+    // 페이지의 wheel 이벤트 리스너 재활성화 (모달이 닫힐 때)
+    window.removeEventListener('wheel', handleBackgroundScroll);
 }

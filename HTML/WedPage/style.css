@@ -172,7 +172,7 @@ span{
 }
 /* 이미지의 둥근 모서리 스타일을 적용하여 원형 이미지처럼 보이도록 설정했습니다. */
 
-.home-img img{
+.home-img .img{
     position: relative;
     width: 32vw;
     border-radius: 50%;
@@ -180,10 +180,49 @@ span{
     cursor: pointer;
     transition: 0.2s linear;
     transition: transform 0.3s ease; /*확대 할때 좀 더 부드럽게 이루어지게 설정*/
+    display:flex;
+    height: 37vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+i.fa-solid.fa-user {
+    font-size: 34px;
+    position: relative;
+    left: 28px;
+    color: #b74b4b;
+}
+i.fa-solid.fa-lock{
+    font-size: 34px;
+    position: relative;
+    left: 28px;
+    color: #b74b4b;
+}
+.login-form #circle-user{
+    position: absolute;
+    top: 60px;
+    left: 246px;
+    font-size: 6.5vw;
+    color: #b74b4b;
+    border-radius: 50%;
+    box-shadow: 0 1px 24px 6px #b74b4b;
+}
+.user-box{
+    margin-bottom: 10px;
+    width: 16vw;
+    height: 2vw;
+    display: flex;
+}
+.user-box input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    color:#b74b4b;
+    border-bottom: 1px solid #b74b4b;
 }
 /* 이미지의 크기, 그림자 효과, 전환 효과를 설정하여 사용자 상호작용 시 스타일이 변하도록 했습니다. */
 
-.home-img img:hover{
+.home-img .img:hover{
     font-size: 1.8rem;
     font-weight: 500;
     transform: scale(1.1); /*이미지에 마우스를 올릴때 1.1배 확대*/
@@ -493,7 +532,7 @@ section .button button:hover{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 40vw;
+    height: 37vw;
 }
 
 .services .boxes .box{
@@ -501,7 +540,7 @@ section .button button:hover{
     width: calc(100% / 3 - 20px);
     text-align: center;
     border-radius: 12px;
-    padding: 30px 10px;
+    /* padding: 30px 10px; */
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
     cursor: default;
     color: white;
@@ -515,9 +554,9 @@ section .button button:hover{
     transition: transform 0.6s ease;
 }
 .services .boxes .box:hover{
-    background-color: #b74b4b;
+    /* background-color: #b74b4b; */
     color: #fff;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 .services .boxes .box .icon{
     height: 50px;
@@ -533,12 +572,12 @@ section .button button:hover{
 }
 .boxes .box:hover .icon{
     background-color: #fff;
-    color: #b74b4b;
+    /* color: #b74b4b; */
 }
 .box:hover .box-inner{
     transform: rotateY(180deg);
 }
-.box-front, .box-back {
+.box-front{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -552,22 +591,46 @@ section .button button:hover{
     align-items: center;
 }
 .box-back {
-    background-color: #b74b4b;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    width: 100%;
     height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    text-align: center;
+    border-radius: 12px;
+    /* background-color: #b74b4b; */
+    transform: rotateY(180deg);
 }
-.thumbnail_img{
-    width: 200px;
-    height: 200px;
+
+.thumbnail_img {
+    width: 100%; /* 이미지가 부모 div의 너비를 꽉 채우도록 */
+    height: 50%; /* 이미지의 높이를 부모 div의 40%로 설정 */
+    border-radius: 12px 12px 0px 0px;
+    border-bottom: 3px solid black;
+    /* margin-bottom: 10%; 이미지 아래에 10% 여백 추가 */
+}
+
+.detail-btn {
+    margin-top: 10%; /* 버튼과 설명 간의 여백을 위해 설정 */
+}
+
+.project_span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 설명란 추가 */
+.description {
+    width: 100%; /* 설명란을 부모 div 너비에 맞추어 채운다 */
+    margin-top: 10%; /* 버튼과 설명란 사이에 10% 여백 추가 */
+    text-align: center; /* 설명을 가운데 정렬 */
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
 }
 /* 이미지와 텍스트를 각각 감싸는 컨테이너 */
 .slider-container {
     position: relative;
-    top:30px;
     width: 100%;
     max-height: 435px;
     display: flex;
@@ -620,8 +683,8 @@ section .button button:hover{
 .detail-btn{
     width: 130px;
     height: 40px;
-    padding: 10px 25px;
-    border:2px solid #000;
+    padding: 10px 30px;
+    /* border:2px solid #000; */
     font-weight: 500;
     background: transparent;
     cursor: pointer;
@@ -636,7 +699,7 @@ section .button button:hover{
 }
 .detail-btn:hover{
     background: transparent;
-    color: #000;
+    color: #fff;
 }
 .detail-btn span{
     position: relative;
@@ -650,7 +713,7 @@ section .button button:hover{
     content: "";
     left: 0;
     top: 0;
-    background: #000;
+    background: #fff;
     transition: all 0.3s ease;
 }
 .detail-btn:before{
@@ -673,7 +736,7 @@ section .button button:hover{
     content: "";
     right: 0;
     bottom: 0;
-    background: #000;
+    background: #fff;
     transition: all 0.3s ease;
   }
 .detail-btn .project_span:before {
@@ -734,7 +797,6 @@ section .button button:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 1000;
@@ -749,7 +811,6 @@ section .button button:hover{
     flex-grow: 1; /* 내용이 늘어나면 내부에서 스크롤 */
     overflow-y: auto;
     max-height: calc(100% - 40px); /* 모달의 높이 제한 */
-    padding: 10px;
 }
 
 .close-btn {
@@ -758,6 +819,7 @@ section .button button:hover{
     right: 10px;
     font-size: 24px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .slider-container {
@@ -768,22 +830,96 @@ section .button button:hover{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    background-color: lightgray;
 }
 
 img#modalImage {
     width: 100%;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: contain;
 }
 
 .modal-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left; 
+    padding: 20px;
+    margin: auto;
+    background-color: white;
+    width: 40%;
     color: black;
+}
+/* 모달 제목 스타일 */
+.modal-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 모달 내용 리스트 스타일 */
+.modal-content-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* 각 항목에 일정 간격을 주기 위한 스타일 */
+.modal-content-list li {
+    font-size: 15px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;  /* 각 항목 간의 간격 */
+}
+
+.modal-content-list li::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black; /* 삼각형 모양 */
+    position: absolute;
+    left: 0; /* li의 좌측에 배치 */
+    top: 50%;
+    transform: translateY(-50%); /* 세로 가운데 정렬 */
+}
+
+.modal i{
+    color:#b74b4b;
+    font-size: 25px;
+}
+
+/* 각 섹션에 고유한 스타일 적용 */
+.topic-section {
+    
     padding: 10px;
-    text-align: left;
-    max-height: 200px; /* 설명이 너무 길면 스크롤 */
-    overflow-y: auto;
-    border-top: 1px solid #ddd;
-    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.features-section {
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tech-section {
+   
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contribution-section {
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.issues-section {
+
+    padding: 10px;
+    border-radius: 5px;
 }
 /*---------------------------------------*/
 /* Footer CSS*/

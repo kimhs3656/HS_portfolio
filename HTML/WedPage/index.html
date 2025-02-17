@@ -24,7 +24,19 @@
     <!-- Home Section Start-->
     <section class="home" id="home">
         <div class="home-img" data-aos="zoom-out" data-aos-duration="1500">
-            <img src="img/main.png" alt="">
+            <div class="img">
+                <div class="login-form">
+                    <i class="fa-solid fa-circle-user" id="circle-user"></i>
+                    <div class="login-box">
+                        <div class="user-box">
+                            <i class="fa-solid fa-user"></i><input type="text">
+                        </div>
+                        <div class="user-box">
+                            <i class="fa-solid fa-lock"></i><input type="password"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Kim</span></h1>
@@ -123,6 +135,60 @@
                         <!-- 카드 뒷면 -->
                         <div class="box-back">
                             <img src="img/project1_mainpage.png" class="thumbnail_img">
+                            <div class="description">
+                                <h3><i class="fa-solid fa-pen"></i> 전력 사용량 및 요금 조회 / SNS 로그인 기능</h3>
+                                <br><br>
+                                <p>사용자의 냉/난방 사용량과 요금을 조회하는 사이트</p>
+                                <p>SNS 로그인 기능 / Q&A 게시판 구현</p>
+                            </div>
+                            <button class="detail-btn" onclick="openModal(event, 0)">
+                                <span class="project_span">상세보기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                    <div class="box-inner">
+                        <!-- 카드 앞면 -->
+                        <div class="box-front">
+                            <div class="icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="topic">전력 사용량 대시보드</div>
+                        </div>
+                        <!-- 카드 뒷면 -->
+                        <div class="box-back">
+                            <img src="img/project2_mainpage.png" class="thumbnail_img">
+                            <div class="description">
+                                <h3><i class="fa-solid fa-pen"></i> 전력 사용량 예측 모니터링 대시보드</h3>
+                                <br><br>
+                                <p>전국 시도의 전력사용량 예측 대시보드</p>
+                                <p>전국 단위 데이터 / 여러 모델의 예측값 비교</p>
+                            </div>
+                            <button class="detail-btn" onclick="openModal(event, 0)">
+                                <span class="project_span">상세보기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                    <div class="box-inner">
+                        <!-- 카드 앞면 -->
+                        <div class="box-front">
+                            <div class="icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="topic">버스 사용자 수 예측</div>
+                        </div>
+                        <!-- 카드 뒷면 -->
+                        <div class="box-back">
+                            <img src="img/project3_mainpage.png" class="thumbnail_img">
+                            <div class="description">
+                                <h3><i class="fa-solid fa-pen"></i> 버스 노선별 사용자 수 예측 및 불편사항 접수 시스템</h3>
+                                <br><br>
+                                <p>버스 노선별 사용자 수를 예측</p>
+                                <p>불편사항 접수 및 버스 도착정보 제공</p>
+                            </div>
                             <button class="detail-btn" onclick="openModal(event, 0)">
                                 <span class="project_span">상세보기</span>
                             </button>
@@ -134,7 +200,7 @@
     </section>
     
     <!-- 모달 창 -->
-    <div id="projectModal" class="modal">
+    <div id="projectModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <div class="slider-container">
@@ -143,8 +209,53 @@
                 <button class="next-btn" onclick="changeImage(1)">&gt;</button>
             </div>
             <div class="modal-description">
-                <h3>주제</h3>
-                <p>사용자의 전력 요금과 사용량을 실시간으로 조회할 수 있는 웹 사이트.</p>
+                <!-- 주제 -->
+                <div class="modal-section topic-section">
+                    <h3 class="modal-heading"><i class="fa-solid fa-hashtag"></i> 주제</h3>
+                    <ul class="modal-content-list">
+                        <li>사용자의 전력 요금과 사용량을 실시간으로 조회할 수 있는 웹 사이트.</li>
+                    </ul>
+                </div>
+            
+                <!-- 주요 기능 -->
+                <div class="modal-section features-section">
+                    <h3 class="modal-heading"><i class="fa-solid fa-exclamation"></i> 주요기능</h3>
+                    <ul class="modal-content-list">
+                        <li>전력 요금 계산기</li>
+                        <li>실시간 전력 사용량 조회</li>
+                        <li>사용자별 요금 히스토리 보기</li>
+                    </ul>
+                </div>
+            
+                <!-- 사용 기술 및 언어 -->
+                <div class="modal-section tech-section">
+                    <h3 class="modal-heading"><i class="fa-solid fa-gear"></i> 사용기술 및 언어</h3>
+                    <ul class="modal-content-list">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Node.js, Express.js</li>
+                        <li>MySQL 데이터베이스</li>
+                    </ul>
+                </div>
+            
+                <!-- 작업 기여도 -->
+                <div class="modal-section contribution-section">
+                    <h3 class="modal-heading"><i class="fa-solid fa-handshake-angle"></i> 작업 기여도</h3>
+                    <ul class="modal-content-list">
+                        <li>프론트엔드 디자인 및 UI 구현</li>
+                        <li>백엔드 API 설계 및 구현</li>
+                        <li>배포 및 유지보수</li>
+                    </ul>
+                </div>
+            
+                <!-- 문제점 -->
+                <div class="modal-section issues-section">
+                    <h3 class="modal-heading"><i class="fa-solid fa-hand"></i> 문제점</h3>
+                    <ul class="modal-content-list">
+                        <li>실시간 데이터 업데이트 문제</li>
+                        <li>사용자 인증 및 보안 문제</li>
+                        <li>대규모 트래픽 처리 성능 문제</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
