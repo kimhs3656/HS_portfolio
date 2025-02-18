@@ -176,7 +176,7 @@ span{
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px 5px #b74b4b;
+    /* box-shadow: 0 0 25px 5px #b74b4b; */
     cursor: pointer;
     transition: 0.2s linear;
     transition: transform 0.3s ease; /*확대 할때 좀 더 부드럽게 이루어지게 설정*/
@@ -189,29 +189,47 @@ span{
 i.fa-solid.fa-user {
     font-size: 34px;
     position: relative;
-    left: 28px;
+    left: -4px;
+    top: 6px;
     color: #b74b4b;
 }
 i.fa-solid.fa-lock{
     font-size: 34px;
     position: relative;
-    left: 28px;
+    left: -4px;
+    top: 6px;
     color: #b74b4b;
+}
+.login-form{
+    border: 1px solid black;
+    border-radius: 11px;
+    box-shadow: 0 0 25px 10px #b74b4b;
+    width: 78%;
+    height: 80%;
 }
 .login-form #circle-user{
     position: absolute;
-    top: 60px;
+    top: 154px;
     left: 246px;
     font-size: 6.5vw;
     color: #b74b4b;
     border-radius: 50%;
     box-shadow: 0 1px 24px 6px #b74b4b;
 }
+.login-box{
+    display: block;
+    position: relative;
+    top: 70px;
+}
 .user-box{
-    margin-bottom: 10px;
+    position: relative;
+    /* margin-bottom: 10px; */
     width: 16vw;
     height: 2vw;
     display: flex;
+    margin-bottom: 24px;
+    right: -92px;
+    top: 221px;
 }
 .user-box input{
     width: 100%;
@@ -220,8 +238,28 @@ i.fa-solid.fa-lock{
     color:#b74b4b;
     border-bottom: 1px solid #b74b4b;
 }
+.login-signin{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    cursor: pointer;
+    position: relative;
+    top: 250px;
+    left: 170px;
+}
+.login-signin:hover{
+    transform: scale(1.03);
+    background-color: #b74b4b;
+    color:black;
+    box-shadow: 0 0 25px #b74b4b;
+}
 /* 이미지의 크기, 그림자 효과, 전환 효과를 설정하여 사용자 상호작용 시 스타일이 변하도록 했습니다. */
-
 .home-img .img:hover{
     font-size: 1.8rem;
     font-weight: 500;
@@ -810,7 +848,7 @@ section .button button:hover{
     text-align: center;
     flex-grow: 1; /* 내용이 늘어나면 내부에서 스크롤 */
     overflow-y: auto;
-    max-height: calc(100% - 40px); /* 모달의 높이 제한 */
+    max-height: calc(100% - 0px); /* 모달의 높이 제한 */
 }
 
 .close-btn {
