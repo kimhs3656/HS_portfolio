@@ -176,3 +176,27 @@ function closeModal() {
     // 페이지의 wheel 이벤트 리스너 재활성화 (모달이 닫힐 때)
     window.removeEventListener('wheel', handleBackgroundScroll);
 }
+
+function openModal(event, projectIndex) {
+    const modal = document.getElementById("projectModal");
+    const modalContent = document.getElementById("modalContent");
+    
+    // 프로젝트별 HTML 파일 매핑
+    const projectFiles = [
+        "personal_mail.html"
+    ];
+
+    // AJAX 요청으로 해당 프로젝트의 HTML 파일 불러오기
+    fetch(projectFiles[projectIndex])
+        .then(response => response.text())
+        .then(data => {
+            modalContent.innerHTML = data; // 모달 내용 업데이트
+            modal.style.display = "block"; // 모달 표시
+        })
+        .catch(error => console.error("Error loading project file:", error));
+}
+
+// 모달 닫기 기능
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+}

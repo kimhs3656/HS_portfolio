@@ -1,0 +1,401 @@
+/* Services CSS*/
+.services .boxes{
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 두 그룹 사이의 간격 */
+    width: 100%;
+}
+.box {
+    width: 100%; /* 부모 grid에 맞게 조절 */
+    height: 300px; /* 높이 조정 */
+}
+.services .boxes .box{
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 12px;
+    /* padding: 30px 10px; */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+    cursor: default;
+    color: white;
+    transition: all 0.4s ease;
+}
+.box-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    box-shadow: 0 0 17px 0px #b74b4b;
+    border-radius: 12px;
+}
+.services .boxes .box:hover{
+    /* background-color: #b74b4b; */
+    color: #fff;
+    /* transform: scale(1.1); */
+}
+.services .boxes .box .icon{
+    height: 50px;
+    width: 50px;
+    background: #b74b4b;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+    background-color: #fff;
+    /* color: #b74b4b; */
+}
+.box:hover .box-inner{
+    transform: rotateY(180deg);
+}
+.box-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    text-align: center;
+    border-radius: 12px;
+    padding:30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    text-align: center;
+    border-radius: 12px;
+    /* background-color: #b74b4b; */
+    transform: rotateY(180deg);
+}
+
+.thumbnail_img {
+    width: 100%; /* 이미지가 부모 div의 너비를 꽉 채우도록 */
+    height: 50%; /* 이미지의 높이를 부모 div의 40%로 설정 */
+    border-radius: 12px 12px 0px 0px;
+    border-bottom: 3px solid black;
+    /* margin-bottom: 10%; 이미지 아래에 10% 여백 추가 */
+}
+
+.detail-btn {
+    margin-top: 10%; /* 버튼과 설명 간의 여백을 위해 설정 */
+}
+
+.project_span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 설명란 추가 */
+.description {
+    width: 100%; /* 설명란을 부모 div 너비에 맞추어 채운다 */
+    margin-top: 10%; /* 버튼과 설명란 사이에 10% 여백 추가 */
+    text-align: center; /* 설명을 가운데 정렬 */
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* 이미지와 텍스트를 각각 감싸는 컨테이너 */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-height: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* 이미지가 커져도 아래 내용이 유지되도록 설정 */
+}
+
+.image-wrapper {
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image {
+    width: 90%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: none;
+}
+
+.project-image.active {
+    display: block;
+}
+
+/* 버튼 스타일 */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev-btn { left: 415px; }
+.next-btn { right: 415px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detail-btn{
+    width: 130px;
+    height: 40px;
+    padding: 10px 30px;
+    /* border:2px solid #000; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    position: relative;
+    display: inline-block;
+}
+
+.detail-btn{
+    line-height: 39px;
+    padding: 0;
+}
+.detail-btn:hover{
+    background: transparent;
+    color: #fff;
+}
+.detail-btn span{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.detail-btn:before,
+.detail-btn:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+.detail-btn:before{
+    height: 0%;
+    width: 2px;
+}
+.detail-btn:after{
+    width: 0%;
+    height: 2px;
+}
+.detail-btn:hover:before {
+    height: 100%;
+  }
+.detail-btn:hover:after {
+    width: 100%;
+  }
+.detail-btn .project_span:before,
+.detail-btn .project_span:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+.detail-btn .project_span:before {
+    width: 2px;
+    height: 0%;
+  }
+.detail-btn .project_span:after {
+    width: 0%;
+    height: 2px;
+  }
+.detail-btn .project_span:hover:before {
+    height: 100%;
+  }
+.detail-btn .project_span:hover:after {
+    width: 100%;
+  }
+.project_span{
+    color:white;
+}
+/* 텍스트 영역 */
+.project-info {
+    flex-grow: 1; /* 이미지 크기에 따라 자동으로 조정되도록 설정 */
+    text-align: center;
+    width: 100%;
+}
+
+.project-title, .project-duration, .project-description {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal {
+    width: 80%;
+    height: 80%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    overflow: hidden; /* 전체 모달 창 크기 유지 */
+    display: flex;
+    flex-direction: column;
+}
+
+#modalContent-content {
+    position: relative;
+    text-align: center;
+    flex-grow: 1; /* 내용이 늘어나면 내부에서 스크롤 */
+    overflow-y: auto;
+    max-height: calc(100% - 0px); /* 모달의 높이 제한 */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-height: 350px; /* 이미지 높이 조정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+img#modalImage {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.modal-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left; 
+    padding: 20px;
+    margin: auto;
+    background-color: white;
+    width: 40%;
+    color: black;
+}
+/* 모달 제목 스타일 */
+.modal-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 모달 내용 리스트 스타일 */
+.modal-content-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* 각 항목에 일정 간격을 주기 위한 스타일 */
+.modal-content-list li {
+    font-size: 15px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;  /* 각 항목 간의 간격 */
+}
+
+.modal-content-list li::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid black; /* 삼각형 모양 */
+    position: absolute;
+    left: 0; /* li의 좌측에 배치 */
+    top: 50%;
+    transform: translateY(-50%); /* 세로 가운데 정렬 */
+}
+
+.modal i{
+    color:#b74b4b;
+    font-size: 25px;
+}
+
+/* 각 섹션에 고유한 스타일 적용 */
+.topic-section {
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.features-section {
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tech-section {
+   
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contribution-section {
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.issues-section {
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 프로젝트 카테고리 스타일 */
+.project-category {
+    flex: 1; /* 두 개의 프로젝트 그룹이 동일한 너비를 가지도록 설정 */
+    text-align: center;
+}
+
+/* 제목 스타일 */
+.project-category h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* 2x2 배치 (가로 2개 × 세로 2개) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0px 20px;
+    justify-content: center;
+    width: 100%;
+}

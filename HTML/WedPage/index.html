@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../WedPage/style.css">
+    <link rel="stylesheet" href="../WedPage/css/common.css">
+    <link rel="stylesheet" href="../WedPage/css/home.css">
+    <link rel="stylesheet" href="../WedPage/css/about.css">
+    <link rel="stylesheet" href="../WedPage/css/skills.css">
+    <link rel="stylesheet" href="../WedPage/css/project.css">
+    <link rel="stylesheet" href="../WedPage/css/contact.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="jquery-3.6.4.min.js"></script>
 </head>
@@ -64,36 +69,34 @@
                         <div class="img">
                             <div class="login-form">
                                     <div class="user-box">
-                                        <input id="myname" type="text">
+                                        <label for="myname">Name</label>
+                                        <input id="myname" type="text" style="font-size: 15px;" value="김한성" readonly>
                                     </div>
+                                    <br>
                                     <div class="user-box">
-                                        <input id="myage" type="text"> 
+                                        <label for="mybirth">birth</label>
+                                        <input id="mybirth" type="text" style="font-size: 15px;" value="1998.03.19" readonly>
+                                    </div>
+                                    <br>
+                                    <div class="user-box">
+                                        <label for="myeducation">Education</label>
+                                        <input id="myeducation1" type="text" style="font-size: 15px;" value="영산대학교 사이버보안학과 졸업" readonly>
+                                        <input id="myeducation2" type="text" style="font-size: 15px;" value="그린컴퓨터아카데미 울산 수료" readonly>
                                     </div>
                                     <div>
-                                        <input id="my">
-                                    </div>
-                                    <div>
-                                        <button class="login-signin">Sign in</button>
+                                        <button class="sign-up">Sign up</button>
                                     </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="topic">Designing Is My Passion</div>
+                    <div class="topic">안녕하세요. 저는 김한성입니다.</div>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        At id facere numquam cupiditate ad eveniet error laborum inventore, 
-                        repellendus delectus voluptate quis rerum ullam consectetur, 
-                        dolore neque quisquam soluta illo?
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        At id facere numquam cupiditate ad eveniet error laborum inventore, 
-                        repellendus delectus voluptate quis rerum ullam consectetur, 
-                        dolore neque quisquam soluta illo?
+                        🚀 "새로운 기술을 배우고, 이를 프로젝트에 적용하는 과정에서 성취감을 느낍니다. 끊임없이 배우고 도전하며 더 나은 개발자가 되기 위해 노력합니다."
+                        <br>
+                        🤝 "효율적인 협업과 원활한 소통을 중요하게 생각합니다. 함께 성장하는 개발 문화를 만들어가는 것이 목표입니다."
                     </p>
-                    <div class="button">
-                        <button>Download CV</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -103,35 +106,38 @@
         <div class="content">
             <div class="title"><span>Skills</span></div>
             <div class="skills-details">
-                <div class="text">
-                    <div class="topic">
-                        Skills Reflects Our Knowledge
-                    </div>
-                    <p data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti nemo aliquid reiciendis quae ut molestiae rerum quos harum. Repudiandae corporis suscipit accusamus ex commodi voluptates dignissimos quia explicabo tempore.</p>
-                    <div class="experience">
-                        <div class="num">10</div>
-                        <div class="exp">
-                            Years Of<br>
-                            Experience
-                        </div>
-                    </div>
-                </div>
                 <div class="boxes">
                     <div class="box"data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">HTML</div>
-                        <div class="per">90%</div>
+                        <div class="per"><img src="img/htmlimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">CSS</div>
-                        <div class="per">80%</div>
+                        <div class="per"><img src="img/cssimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">JavaScript</div>
-                        <div class="per">70%</div>
+                        <div class="per"><img src="img/jsimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">PHP</div>
-                        <div class="per">60%</div>
+                        <div class="per"><img src="img/phpimg.png" alt=""></div>
+                    </div>
+                    <div class="box" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="topic">JAVA</div>
+                        <div class="per"><img src="img/javaimg.png" alt=""></div>
+                    </div>
+                    <div class="box" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="topic">PYTHON</div>
+                        <div class="per"><img src="img/pythonimg.png" alt=""></div>
+                    </div>
+                    <div class="box" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="topic">SPRING</div>
+                        <div class="per"><img src="img/springimg.png" alt=""></div>
+                    </div>
+                    <div class="box" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="topic">Github</div>
+                        <div class="per"><img src="img/githubimg.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -143,76 +149,122 @@
         <div class="content">
             <div class="title"><span>My Project</span></div>
             <div class="boxes">
-                <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
-                    <div class="box-inner">
-                        <!-- 카드 앞면 -->
-                        <div class="box-front">
-                            <div class="icon">
-                                <i class="fas fa-desktop"></i>
+                <div class="project-category personal-projects">
+                    <h2>Personal Projects</h2>
+                    <div class="project-grid">
+                    <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                            <div class="box-inner">
+                                <!-- 카드 앞면 -->
+                                <div class="box-front">
+                                    <div class="icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="topic">메일 발송 시스템(API)</div>
+                                </div>
+                                <!-- 카드 뒷면 -->
+                                <div class="box-back">
+                                    <img src="img/NW_mailsend_main.png" class="thumbnail_img">
+                                    <button class="detail-btn" onclick="openModal(event, 0)">
+                                        <span class="project_span">상세보기</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="topic">전력 사용량 조회</div>
-                        </div>
-                        <!-- 카드 뒷면 -->
-                        <div class="box-back">
-                            <img src="img/project1_mainpage.png" class="thumbnail_img">
-                            <div class="description">
-                                <h3><i class="fa-solid fa-pen"></i> 전력 사용량 및 요금 조회 / SNS 로그인 기능</h3>
-                                <br><br>
-                                <p>사용자의 냉/난방 사용량과 요금을 조회하는 사이트</p>
-                                <p>SNS 로그인 기능 / Q&A 게시판 구현</p>
+                    </div>
+                    <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                            <div class="box-inner">
+                                <!-- 카드 앞면 -->
+                                <div class="box-front">
+                                    <div class="icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="topic">전력 사용량 대시보드</div>
+                                </div>
+                                <!-- 카드 뒷면 -->
+                                <div class="box-back">
+                                    <img src="img/project2_mainpage.png" class="thumbnail_img">
+                                    <button class="detail-btn" onclick="openModal(event, 0)">
+                                        <span class="project_span">상세보기</span>
+                                    </button>
+                                </div>
                             </div>
-                            <button class="detail-btn" onclick="openModal(event, 0)">
-                                <span class="project_span">상세보기</span>
-                            </button>
-                        </div>
+                    </div>
+                    <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                            <div class="box-inner">
+                                <!-- 카드 앞면 -->
+                                <div class="box-front">
+                                    <div class="icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="topic">버스 사용자 수 예측</div>
+                                </div>
+                                <!-- 카드 뒷면 -->
+                                <div class="box-back">
+                                    <img src="img/project3_mainpage.png" class="thumbnail_img">
+                                    <button class="detail-btn" onclick="openModal(event, 0)">
+                                        <span class="project_span">상세보기</span>
+                                    </button>
+                                </div>
+                            </div>
+                    </div>
                     </div>
                 </div>
-                <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
-                    <div class="box-inner">
-                        <!-- 카드 앞면 -->
-                        <div class="box-front">
-                            <div class="icon">
-                                <i class="fas fa-desktop"></i>
+                <div class="project-category team-projects">
+                    <h2>Team Projects</h2>
+                    <div class="project-grid">
+                    <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="box-inner">
+                            <!-- 카드 앞면 -->
+                            <div class="box-front">
+                                <div class="icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="topic">전력 사용량 조회</div>
                             </div>
-                            <div class="topic">전력 사용량 대시보드</div>
-                        </div>
-                        <!-- 카드 뒷면 -->
-                        <div class="box-back">
-                            <img src="img/project2_mainpage.png" class="thumbnail_img">
-                            <div class="description">
-                                <h3><i class="fa-solid fa-pen"></i> 전력 사용량 예측 모니터링 대시보드</h3>
-                                <br><br>
-                                <p>전국 시도의 전력사용량 예측 대시보드</p>
-                                <p>전국 단위 데이터 / 여러 모델의 예측값 비교</p>
+                            <!-- 카드 뒷면 -->
+                            <div class="box-back">
+                                <img src="img/project1_mainpage.png" class="thumbnail_img">
+                                <button class="detail-btn" onclick="openModal(event, 0)">
+                                    <span class="project_span">상세보기</span>
+                                </button>
                             </div>
-                            <button class="detail-btn" onclick="openModal(event, 0)">
-                                <span class="project_span">상세보기</span>
-                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
-                    <div class="box-inner">
-                        <!-- 카드 앞면 -->
-                        <div class="box-front">
-                            <div class="icon">
-                                <i class="fas fa-desktop"></i>
+                    <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="box-inner">
+                            <!-- 카드 앞면 -->
+                            <div class="box-front">
+                                <div class="icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="topic">전력 사용량 대시보드</div>
                             </div>
-                            <div class="topic">버스 사용자 수 예측</div>
-                        </div>
-                        <!-- 카드 뒷면 -->
-                        <div class="box-back">
-                            <img src="img/project3_mainpage.png" class="thumbnail_img">
-                            <div class="description">
-                                <h3><i class="fa-solid fa-pen"></i> 버스 노선별 사용자 수 예측 및 불편사항 접수 시스템</h3>
-                                <br><br>
-                                <p>버스 노선별 사용자 수를 예측</p>
-                                <p>불편사항 접수 및 버스 도착정보 제공</p>
+                            <!-- 카드 뒷면 -->
+                            <div class="box-back">
+                                <img src="img/project2_mainpage.png" class="thumbnail_img">
+                                <button class="detail-btn" onclick="openModal(event, 0)">
+                                    <span class="project_span">상세보기</span>
+                                </button>
                             </div>
-                            <button class="detail-btn" onclick="openModal(event, 0)">
-                                <span class="project_span">상세보기</span>
-                            </button>
                         </div>
+                    </div>
+                    <div class="box" onclick="flipCard(this)" data-aos="zoom-out" data-aos-duration="1500">
+                        <div class="box-inner">
+                            <!-- 카드 앞면 -->
+                            <div class="box-front">
+                                <div class="icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="topic">버스 사용자 수 예측</div>
+                            </div>
+                            <!-- 카드 뒷면 -->
+                            <div class="box-back">
+                                <img src="img/project3_mainpage.png" class="thumbnail_img">
+                                <button class="detail-btn" onclick="openModal(event, 0)">
+                                    <span class="project_span">상세보기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -221,63 +273,7 @@
     
     <!-- 모달 창 -->
     <div id="projectModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="slider-container">
-                <button class="prev-btn" onclick="changeImage(-1)">&lt;</button>
-                <img id="modalImage" src="img/project1_mainpage.png" alt="project image">
-                <button class="next-btn" onclick="changeImage(1)">&gt;</button>
-            </div>
-            <div class="modal-description">
-                <!-- 주제 -->
-                <div class="modal-section topic-section">
-                    <h3 class="modal-heading"><i class="fa-solid fa-hashtag"></i> 주제</h3>
-                    <ul class="modal-content-list">
-                        <li>사용자의 전력 요금과 사용량을 실시간으로 조회할 수 있는 웹 사이트.</li>
-                    </ul>
-                </div>
-            
-                <!-- 주요 기능 -->
-                <div class="modal-section features-section">
-                    <h3 class="modal-heading"><i class="fa-solid fa-exclamation"></i> 주요기능</h3>
-                    <ul class="modal-content-list">
-                        <li>전력 요금 계산기</li>
-                        <li>실시간 전력 사용량 조회</li>
-                        <li>사용자별 요금 히스토리 보기</li>
-                    </ul>
-                </div>
-            
-                <!-- 사용 기술 및 언어 -->
-                <div class="modal-section tech-section">
-                    <h3 class="modal-heading"><i class="fa-solid fa-gear"></i> 사용기술 및 언어</h3>
-                    <ul class="modal-content-list">
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>Node.js, Express.js</li>
-                        <li>MySQL 데이터베이스</li>
-                    </ul>
-                </div>
-            
-                <!-- 작업 기여도 -->
-                <div class="modal-section contribution-section">
-                    <h3 class="modal-heading"><i class="fa-solid fa-handshake-angle"></i> 작업 기여도</h3>
-                    <ul class="modal-content-list">
-                        <li>프론트엔드 디자인 및 UI 구현</li>
-                        <li>백엔드 API 설계 및 구현</li>
-                        <li>배포 및 유지보수</li>
-                    </ul>
-                </div>
-            
-                <!-- 문제점 -->
-                <div class="modal-section issues-section">
-                    <h3 class="modal-heading"><i class="fa-solid fa-hand"></i> 문제점</h3>
-                    <ul class="modal-content-list">
-                        <li>실시간 데이터 업데이트 문제</li>
-                        <li>사용자 인증 및 보안 문제</li>
-                        <li>대규모 트래픽 처리 성능 문제</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div id="modalContent"></div>         
     </div>
     
 

@@ -1,0 +1,64 @@
+.skills{
+    background: black;
+}
+
+.skills .content{
+    padding: 40px 0;
+}
+
+.skills .skills-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-details .text{
+    width: 50%;
+}
+
+.skills-details p{
+    color: white;
+    text-align: justify;
+}
+
+.skills .skills-details .experience{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.skills-details .experience .num{
+    color: white;
+    font-size: 80px;
+}
+
+.skills-details .experience .exp{
+    color: white;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+.skills-details .boxes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skills-details .box{
+    width: calc(100%/4 - 20px);
+    margin: 20px 0;
+    text-align: center;
+}
+.skills-details .boxes .topic{
+    font-size: 20px;
+    color: #b74b4b;
+}
+.skills-details .boxes .per{
+    font-size: 60px;
+    color: #b74b4b;
+}
+
+.skills img{
+    width: 40%;
+}
