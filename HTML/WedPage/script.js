@@ -1,5 +1,5 @@
 // HOME에 타이핑 커서용
-const content = ["Web Developer","Developer","Web Designer","Youtube","Script Writer"];
+const content = ["Web Developer","Developer","API Specialist","Backend Developer","Script Writer"];
 let contentPIndex = 0;
 let contentCIndex = 0;
 let isDeleting = false;
@@ -119,30 +119,30 @@ function moveToSection(index){
 //     });
 // });
 
-document.querySelectorAll('.box-back').forEach(box => {
-    const images = box.querySelectorAll('.project-image');
-    const prevBtn = box.querySelector('.prev-btn');
-    const nextBtn = box.querySelector('.next-btn');
-    let currentIndex = 0;
+// document.querySelectorAll('.box-back').forEach(box => {
+//     const images = box.querySelectorAll('.project-image');
+//     const prevBtn = box.querySelector('.prev-btn');
+//     const nextBtn = box.querySelector('.next-btn');
+//     let currentIndex = 0;
 
-    function updateImages() {
-        images.forEach((img, index) => {
-            img.style.display = index === currentIndex ? 'block' : 'none';
-        });
-    }
+//     function updateImages() {
+//         images.forEach((img, index) => {
+//             img.style.display = index === currentIndex ? 'block' : 'none';
+//         });
+//     }
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-        updateImages();
-    });
+//     prevBtn.addEventListener('click', () => {
+//         currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+//         updateImages();
+//     });
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-        updateImages();
-    });
+//     nextBtn.addEventListener('click', () => {
+//         currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+//         updateImages();
+//     });
 
-    updateImages(); // 초기화
-});
+//     updateImages(); // 초기화
+// });
 
 // 카드 클릭 시 뒤집기 기능
 function flipCard(card) {
@@ -155,35 +155,36 @@ function disableScroll(event) {
 }
 
 // 모달을 열 때 스크롤 잠그기
-function openModal(event, projectIndex) {
-    event.stopPropagation(); // 부모 요소의 클릭 이벤트가 실행되지 않도록 방지
-    document.getElementById("projectModal").style.display = "block";
+// function openModal(event, projectIndex) {
+//     event.stopPropagation(); // 부모 요소의 클릭 이벤트가 실행되지 않도록 방지
+//     document.getElementById("projectModal").style.display = "block";
     
-    // 배경 페이지 스크롤 비활성화
-    document.body.style.overflow = "hidden";
+//     // 배경 페이지 스크롤 비활성화
+//     document.body.style.overflow = "hidden";
 
-    // 페이지의 wheel 이벤트 리스너 비활성화 (모달이 열릴 때)
-    window.addEventListener('wheel', handleBackgroundScroll, { passive: false });
-}
+//     // 페이지의 wheel 이벤트 리스너 비활성화 (모달이 열릴 때)
+//     window.addEventListener('wheel', handleBackgroundScroll, { passive: false });
+// }
 
 // 모달을 닫을 때 스크롤 활성화
-function closeModal() {
-    document.getElementById("projectModal").style.display = "none";
+// function closeModal() {
+//     document.getElementById("projectModal").style.display = "none";
     
-    // 배경 페이지 스크롤 활성화
-    document.body.style.overflow = "auto";
+//     // 배경 페이지 스크롤 활성화
+//     document.body.style.overflow = "auto";
 
-    // 페이지의 wheel 이벤트 리스너 재활성화 (모달이 닫힐 때)
-    window.removeEventListener('wheel', handleBackgroundScroll);
-}
+//     // 페이지의 wheel 이벤트 리스너 재활성화 (모달이 닫힐 때)
+//     window.removeEventListener('wheel', handleBackgroundScroll);
+// }
 
 function openModal(event, projectIndex) {
     const modal = document.getElementById("projectModal");
     const modalContent = document.getElementById("modalContent");
-    
+
     // 프로젝트별 HTML 파일 매핑
     const projectFiles = [
-        "personal_mail.html"
+        "modal/personal_mail.html",
+        "modal/personal_portfolio.html"
     ];
 
     // AJAX 요청으로 해당 프로젝트의 HTML 파일 불러오기
@@ -192,6 +193,24 @@ function openModal(event, projectIndex) {
         .then(data => {
             modalContent.innerHTML = data; // 모달 내용 업데이트
             modal.style.display = "block"; // 모달 표시
+            // 배경 페이지 스크롤 비활성화
+            document.body.style.overflow = "hidden";
+            // 페이지의 wheel 이벤트 리스너 비활성화 (모달이 열릴 때)
+            window.addEventListener('wheel', handleBackgroundScroll, { passive: false });
+            var swiper = new Swiper('.swiper', {
+                // Install Plugin To Swiper
+            
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                // Enable debugger
+                debugger: true,
+              });
         })
         .catch(error => console.error("Error loading project file:", error));
 }
@@ -199,4 +218,8 @@ function openModal(event, projectIndex) {
 // 모달 닫기 기능
 function closeModal() {
     document.getElementById("projectModal").style.display = "none";
+    // 배경 페이지 스크롤 활성화
+    document.body.style.overflow = "auto";
+    // 페이지의 wheel 이벤트 리스너 재활성화 (모달이 닫힐 때)
+    window.removeEventListener('wheel', handleBackgroundScroll);
 }

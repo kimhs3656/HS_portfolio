@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../WedPage/css/contact.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -49,7 +51,7 @@
         <div class="home-content">
             <h1>Hi, It's <span>Kim</span></h1>
             <h3 class="typing-text">I'm a <span class="text"></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex in quam hic quibusdam quisquam cumque, iste repudiandae dolore? Quisquam expedita exercitationem quam deleniti possimus quo, debitis illo aperiam voluptatem sint.</p>
+            <p>"안녕하세요! 창의적인 아이디어와 열정으로 가득한 김한성의 포토폴리오에 오신 것을 환영합니다. 다양한 프로젝트와 작업을 통해 제 역량을 소개합니다."</p>
             <div class="social-icons">
                 <a href="#" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-github"></i></a>
@@ -109,35 +111,35 @@
                 <div class="boxes">
                     <div class="box"data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">HTML</div>
-                        <div class="per"><img src="img/htmlimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/htmlimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">CSS</div>
-                        <div class="per"><img src="img/cssimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/cssimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">JavaScript</div>
-                        <div class="per"><img src="img/jsimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/jsimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">PHP</div>
-                        <div class="per"><img src="img/phpimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/phpimg.png" alt=""></div> 
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">JAVA</div>
-                        <div class="per"><img src="img/javaimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/javaimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">PYTHON</div>
-                        <div class="per"><img src="img/pythonimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/pythonimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">SPRING</div>
-                        <div class="per"><img src="img/springimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/springimg.png" alt=""></div>
                     </div>
                     <div class="box" data-aos="zoom-out" data-aos-duration="1500">
                         <div class="topic">Github</div>
-                        <div class="per"><img src="img/githubimg.png" alt=""></div>
+                        <div class="per"><img src="img/Skills/githubimg.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -163,7 +165,7 @@
                                 </div>
                                 <!-- 카드 뒷면 -->
                                 <div class="box-back">
-                                    <img src="img/NW_mailsend_main.png" class="thumbnail_img">
+                                    <img src="img/Project/Personal/mailsend/NW_mailsend_main.png" class="thumbnail_img">
                                     <button class="detail-btn" onclick="openModal(event, 0)">
                                         <span class="project_span">상세보기</span>
                                     </button>
@@ -177,12 +179,12 @@
                                     <div class="icon">
                                         <i class="fas fa-desktop"></i>
                                     </div>
-                                    <div class="topic">전력 사용량 대시보드</div>
+                                    <div class="topic">포토폴리오 페이지</div>
                                 </div>
                                 <!-- 카드 뒷면 -->
                                 <div class="box-back">
-                                    <img src="img/project2_mainpage.png" class="thumbnail_img">
-                                    <button class="detail-btn" onclick="openModal(event, 0)">
+                                    <img src="img/Project/Personal/portfolio/portfolio_main.png" class="thumbnail_img">
+                                    <button class="detail-btn" onclick="openModal(event, 1)">
                                         <span class="project_span">상세보기</span>
                                     </button>
                                 </div>
@@ -195,14 +197,11 @@
                                     <div class="icon">
                                         <i class="fas fa-desktop"></i>
                                     </div>
-                                    <div class="topic">버스 사용자 수 예측</div>
+                                    <div class="topic">준비 중</div>
                                 </div>
                                 <!-- 카드 뒷면 -->
-                                <div class="box-back">
-                                    <img src="img/project3_mainpage.png" class="thumbnail_img">
-                                    <button class="detail-btn" onclick="openModal(event, 0)">
-                                        <span class="project_span">상세보기</span>
-                                    </button>
+                                <div class="box-back" style="display: flex; justify-content: center; align-items: center;">
+                                    <div class="topic">준비 중입니다.</div>
                                 </div>
                             </div>
                     </div>
@@ -222,7 +221,7 @@
                             </div>
                             <!-- 카드 뒷면 -->
                             <div class="box-back">
-                                <img src="img/project1_mainpage.png" class="thumbnail_img">
+                                <img src="img/Project/Team/power-usage/project1_mainpage.png" class="thumbnail_img">
                                 <button class="detail-btn" onclick="openModal(event, 0)">
                                     <span class="project_span">상세보기</span>
                                 </button>
@@ -240,7 +239,7 @@
                             </div>
                             <!-- 카드 뒷면 -->
                             <div class="box-back">
-                                <img src="img/project2_mainpage.png" class="thumbnail_img">
+                                <img src="img/Project/Team/dashboard/project2_mainpage.PNG" class="thumbnail_img">
                                 <button class="detail-btn" onclick="openModal(event, 0)">
                                     <span class="project_span">상세보기</span>
                                 </button>
@@ -258,7 +257,7 @@
                             </div>
                             <!-- 카드 뒷면 -->
                             <div class="box-back">
-                                <img src="img/project3_mainpage.png" class="thumbnail_img">
+                                <img src="img/Project/Team/bus/project3_mainpage.PNG" class="thumbnail_img">
                                 <button class="detail-btn" onclick="openModal(event, 0)">
                                     <span class="project_span">상세보기</span>
                                 </button>
