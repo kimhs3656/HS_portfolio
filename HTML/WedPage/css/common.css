@@ -92,7 +92,7 @@ nav .menu.active{
 /* 내비게이션 링크에 마우스를 올리거나 활성화된 상태일 때, 
 색상과 하단 경계에 강조 효과를 줍니다. */
 
-@media(max-width:995px){
+/* @media(max-width:995px){
     nav{
         position: absolute;
         display: none;
@@ -120,10 +120,25 @@ nav .menu.active{
         border-radius: 0.5rem;
         border-bottom:0.5rem solid #b74b4b;
     }
-}
+} */
 /* 화면 너비가 995px 이하일 때, 내비게이션 메뉴가 숨겨지며, 
 'active' 클래스가 있을 때만 메뉴가 나타나게 하는 미디어 쿼리입니다. 
 모바일 화면에서의 스타일링을 위해 사용되었습니다. */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+}
 
 section{
     min-height:  100vh;

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../WedPage/css/skills.css">
     <link rel="stylesheet" href="../WedPage/css/project.css">
     <link rel="stylesheet" href="../WedPage/css/contact.css">
+    <link rel="stylesheet" href="../WedPage/css/mobile.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -25,8 +26,13 @@
             <a href="#about" class="menu" data-aos="zoom-out" data-aos-duration="1500">About</a>
             <a href="#skills"class="menu" data-aos="zoom-out" data-aos-duration="1500">Skills</a>
             <a href="#services"class="menu" data-aos="zoom-out" data-aos-duration="1500">Project</a>
-            <a href="#contact"class="menu" data-aos="zoom-out" data-aos-duration="1500">Contact</a>
+            <!-- <a href="#contact"class="menu" data-aos="zoom-out" data-aos-duration="1500">Contact</a> -->
         </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     <!-- Home Section Start-->
     <section class="home" id="home">
@@ -222,7 +228,7 @@
                             <!-- 카드 뒷면 -->
                             <div class="box-back">
                                 <img src="img/Project/Team/power-usage/project1_mainpage.png" class="thumbnail_img">
-                                <button class="detail-btn" onclick="openModal(event, 0)">
+                                <button class="detail-btn" onclick="openModal(event, 2)">
                                     <span class="project_span">상세보기</span>
                                 </button>
                             </div>
@@ -240,7 +246,7 @@
                             <!-- 카드 뒷면 -->
                             <div class="box-back">
                                 <img src="img/Project/Team/dashboard/project2_mainpage.PNG" class="thumbnail_img">
-                                <button class="detail-btn" onclick="openModal(event, 0)">
+                                <button class="detail-btn" onclick="openModal(event, 4)">
                                     <span class="project_span">상세보기</span>
                                 </button>
                             </div>
@@ -258,7 +264,7 @@
                             <!-- 카드 뒷면 -->
                             <div class="box-back">
                                 <img src="img/Project/Team/bus/project3_mainpage.PNG" class="thumbnail_img">
-                                <button class="detail-btn" onclick="openModal(event, 0)">
+                                <button class="detail-btn" onclick="openModal(event, 3)">
                                     <span class="project_span">상세보기</span>
                                 </button>
                             </div>
@@ -269,15 +275,9 @@
             </div>
         </div>
     </section>
-    
-    <!-- 모달 창 -->
-    <div id="projectModal" class="modal" style="display: none;">
-        <div id="modalContent"></div>         
-    </div>
-    
 
      <!-- Contact Me section Start-->
-     <section class="contact" id="contact">
+     <section class="contact" id="contact" style="display: none;">
         <div class="content">
             <div class="title"><span>Contact Me</span></div>
             <div class="text">
@@ -297,6 +297,12 @@
             </span>
         </div>
       </footer>
+
+    <!-- 모달 창 -->
+    <div id="projectModal" class="modal" style="display: none;">
+        <div id="modalContent"></div>         
+    </div>
+    
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -256,7 +256,6 @@ i.fa-solid.fa-lock{
 @media(max-width:995px){
     .home{
         flex-direction:column;
-        margin:5rem 4rem;
     }
 
     .home .home-content h3{

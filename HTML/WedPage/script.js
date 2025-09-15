@@ -1,5 +1,5 @@
 // HOME에 타이핑 커서용
-const content = ["Web Developer","Developer","API Specialist","Backend Developer","Script Writer"];
+const content = ["Web Developer","Developer","API Specialist","Script Writer"];
 let contentPIndex = 0;
 let contentCIndex = 0;
 let isDeleting = false;
@@ -184,7 +184,10 @@ function openModal(event, projectIndex) {
     // 프로젝트별 HTML 파일 매핑
     const projectFiles = [
         "modal/personal_mail.html",
-        "modal/personal_portfolio.html"
+        "modal/personal_portfolio.html",
+        "modal/team_powerusage.html",
+        "modal/team_bususer.html",
+        "modal/team_powerusage2.html"
     ];
 
     // AJAX 요청으로 해당 프로젝트의 HTML 파일 불러오기
@@ -223,3 +226,16 @@ function closeModal() {
     // 페이지의 wheel 이벤트 리스너 재활성화 (모달이 닫힐 때)
     window.removeEventListener('wheel', handleBackgroundScroll);
 }
+
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        nav.classList.remove("active");
+    }
+});

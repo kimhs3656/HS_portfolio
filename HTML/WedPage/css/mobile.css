@@ -1,0 +1,47 @@
+@media(max-width:1200px){
+    
+    .home-img{display: none;}
+    .about-details .right {width: unset !important;}
+    .about .about-details {display: unset !important;}
+    .skills-details .box{width: calc(100% / 2 - 20px) !important;}
+    .services .boxes{flex-direction: column;}
+    .project-grid{grid-template-columns:repeat(1, 1fr) !important;}
+    .typing-text .text {display: inline-block;width: 15ch; text-align: left;}
+    .typing-text span::after{width: unset !important;}
+    .swiper{width: 100% !important;}
+    .close-btn{z-index: 2 !important;}
+    .modal{width: 95% !important;}
+    .swiper img{width: 100% !important;}
+    .modal-description{grid-template-columns:unset !important; margin-left:unset !important; margin-right: unset !important;}
+    footer .text span{font-size: 1.1rem;}
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+
+        opacity: 0;               /* 처음엔 안보이게 */
+        transform: translateX(100%); /* 오른쪽 밖으로 숨기기 */
+        transition: all 0.3s ease;   /* 애니메이션 적용 */
+        pointer-events: none;        /* 안보일 때 클릭 방지 */
+
+        display: block;
+    }
+    
+    nav.active {
+        opacity: 1;                /* 보이기 */
+        transform: translateX(0);  /* 제자리 */
+        pointer-events: auto;       /* 클릭 가능 */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+}
