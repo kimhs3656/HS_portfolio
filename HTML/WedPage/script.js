@@ -187,7 +187,9 @@ function openModal(event, projectIndex) {
         "modal/personal_portfolio.html",
         "modal/team_powerusage.html",
         "modal/team_bususer.html",
-        "modal/team_powerusage2.html"
+        "modal/team_powerusage2.html",
+        "modal/company_jnpmall.html",
+        "modal/company_itcnet.html"
     ];
 
     // AJAX 요청으로 해당 프로젝트의 HTML 파일 불러오기
